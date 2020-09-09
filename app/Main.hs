@@ -1,14 +1,7 @@
 module Main where
 
-import Lib
+main = increment2 4
 
-main :: IO()
-main = sayHello "abc"
-
-
-sayHello :: String -> IO()
-sayHello x =
-    putStrLn ("Hello " ++ x ++ "!")
-
-
-
+increment2 :: Integer -> IO()
+increment2 x = let doubleIt = x * 2
+    in print doubleIt
